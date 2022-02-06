@@ -3,20 +3,24 @@ Get reminders for sending messages to friends, family and others. Very handy if 
 need an extra hand in helping you out.
 
 * Create a virtual environment
-* Install requirements:
 ```shell
-pip install -r requirements.txt
+$ virtualenv venv
+$ source ./venv/bin/activate
+```
+* Install requirements
+```shell
+$ pip install -r requirements.txt
 ```
 ___
 ##Prepare the project.
 We use django-environ to read environment variables from the `.env` file in your root directory
 ```shell
-echo "ENTERSOMEVERYSECRETKEYWITHMIN50CHARSHERE" > .env
-./manage.py migrate
+$ echo "SECRET_KEY=ENTERSOMEVERYSECRETKEYWITHMIN50CHARSHERE" > .env
+$ ./manage.py migrate
 ```
 ____
 
 ##Start the app
 ```shell
-./manage.py runserver
+$ ./manage.py runserver
 ```
