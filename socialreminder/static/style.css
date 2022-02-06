@@ -1,3 +1,40 @@
-a{
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    /*
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+        aligns agains the main axis
+    align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+        aligns agains the cross axis
+     */
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
     font-size: 30px;
+    height: 100%;
+    margin: 0;
+}
+nav{
+    width: 250px;
+    min-width:20%;
+    background-color: cornflowerblue;
+}
+nav ul{
+    list-style: none;
+}
+nav a{
+    color:ghostwhite;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+nav a:hover {
+    font-style: italic;
+    padding-left: 15px;
+    transition: all 0.25s;
+}
+.content{
+    width: 80%;
 }
