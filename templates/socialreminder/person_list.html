@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+{% for person in person_list %}
+    <li><a href="{% url "person" person.pk %}">{{ person }}</a></li>
+{% empty %}
+    <li>Empty list....<a href="">Add a person</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

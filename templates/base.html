@@ -1,0 +1,18 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="{% url "persons" %}">Persons</a></li>
+        <li><a href="{% url "messages" %}">Messages</a></li>
+        <li><a href="{% url "tags" %}">Tags</a></li>
+    </ul>
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+{% for tag in tag_list %}
+    <li><a href="{% url "tag" tag.pk %}">{{ tag }}</a></li>
+{% empty %}
+    <li>Empty list....<a href="">Add a tag</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
