@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic import TemplateView
 
 from .views import (
     MessageView, MessagesView,
@@ -13,4 +14,5 @@ urlpatterns = [
     path("person/<int:pk>/", PersonView.as_view(), name="person"),
     path("tags/", TagsView.as_view(), name="tags"),
     path("tag/<int:pk>/", TagView.as_view(), name="tag"),
+    path("", TemplateView.as_view(template_name="base.html"), name="base"),
 ]
