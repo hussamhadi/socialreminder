@@ -18,6 +18,11 @@ We use django-environ to read environment variables from the `.env` file in your
 $ echo "SECRET_KEY=ENTERSOMEVERYSECRETKEYWITHMIN50CHARSHERE" > .env
 $ ./manage.py migrate
 ```
+If you want to get up and running with test data, you can run this management command. It will
+create 100 entries with related tags:
+```shell
+$ ./manage.py create_test_data
+```
 ____
 
 ##Start the app
