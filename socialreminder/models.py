@@ -5,7 +5,7 @@ class Tag(models.Model):
     """
     Simple tag object for adding tags to other models
     """
-    name = models.CharField(max_length=150)
+    name = models.CharField(max_length=150, unique=True)
 
     def __str__(self):
         return f"{self.name}"
